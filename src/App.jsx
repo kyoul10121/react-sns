@@ -1,5 +1,13 @@
+import Header from './components/Header';
+import MessageWindow from './components/MessageWindow';
+
 function App() {
-  return <div>윤일이의 SNS</div>;
+  return (
+    <div>
+      <Header />
+      <MessageWindow />
+    </div>
+  );
 }
 
 export default App;
