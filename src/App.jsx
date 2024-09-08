@@ -1,5 +1,5 @@
 function App() {
-  return <div>React SNS</div>;
+  return <div>윤일이의 SNS</div>;
 }
 
 export default App;
