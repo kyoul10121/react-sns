@@ -1,11 +1,18 @@
-import Header from './components/Header';
-import MessageWindow from './components/MessageWindow';
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
+import ChatWindow from './components/ChatWindow';
 
+const appStyle = css`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 function App() {
   return (
-    <div>
-      <Header />
-      <MessageWindow />
+    <div css={appStyle}>
+      <ChatWindow />
     </div>
   );
 }
