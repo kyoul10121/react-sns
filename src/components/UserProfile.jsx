@@ -1,13 +1,43 @@
+/** @jsxImportSource @emotion/react */
 import React from 'react';
+import { css } from '@emotion/react';
+
+const userProfileItems = css`
+  display: flex;
+`;
+const userProfileImage = css`
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #dbdbdb;
+`;
+const userWrapper = css`
+  display: flex;
+  flex-direction: column;
+`;
+const userName = css`
+  font-size: 18px;
+`;
+const userId = css`
+  font-size: 12px;
+  color: #979797;
+`;
+const arrowLeft = css`
+  fill: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+`;
 
 export const UserProfile = () => {
   return (
-    <div>
-      <input type="image" src="src/assets/profile-icon.webp" />
-      <section>
+    <div css={userProfileItems}>
+      <img src="src/assets/arrow-left.png" css={arrowLeft} />
+      <img src="src/assets/mark.jpeg" css={userProfileImage} />
+      <section css={userWrapper}>
         {/* 이름과 아이디 */}
-        <h3>김윤일</h3>
-        <p>kyoul10121</p>
+        <span css={userName}>이민형</span>
+        <span css={userId}>onyourM__ark</span>
       </section>
     </div>
   );
