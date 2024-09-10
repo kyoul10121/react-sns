@@ -16,6 +16,10 @@ const GlobalStyles = () => {
           font-style: normal;
         }
 
+        * {
+          box-sizing: border-box;
+          scrollbar-width: none;
+        }
         html,
         body {
           margin: 0;
@@ -24,6 +28,15 @@ const GlobalStyles = () => {
           background: white;
           min-height: 100%;
           font-family: 'Pretendard-Regular';
+        }
+        button {
+          border: none;
+          background: none;
+        }
+        input,
+        textarea {
+          outline: none;
+          border: none;
         }
       `}
     />
