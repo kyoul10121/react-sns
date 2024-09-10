@@ -19,6 +19,7 @@ const GlobalStyles = () => {
         * {
           box-sizing: border-box;
           scrollbar-width: none;
+          overscroll-behavior: none; // 스크롤이 오버되는 것을 막아준다.
         }
         html,
         body {
