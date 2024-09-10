@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 
 const MyMessageItemWrapper = css`
@@ -43,18 +43,18 @@ const userTime = css`
   color: #b6b6b6;
 `;
 
-export const MyMessageItem = () => {
+export const MyMessageItem = ({ message, user }) => {
   return (
     <div>
       <div css={MyMessageItemWrapper}>
         <div css={MyMessageInfo}>
-          <span css={userId}>kyoul10121</span>
+          <span css={userId}>{user.userName}</span>
           <div css={MyMessageTextItem}>
-            <span css={userTime}>오후 7:12</span>
-            <div css={MyMessageText}>사랑해</div>
+            <span css={userTime}>{message.time}</span>
+            <div css={MyMessageText}>{message.text}</div>
           </div>
         </div>
-        <img src="src/assets/myprofile.jpeg" css={profileImage} />
+        <img src={user.userImage} alt={user.userName} css={profileImage} />
       </div>
     </div>
   );
