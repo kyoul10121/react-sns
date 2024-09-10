@@ -5,10 +5,8 @@ import Header from './Header';
 import MessageWindow from './MessageWindow';
 
 const Wrapper = css`
-  /* align-items: center;
-  justify-self: center;
-  /* width: 100%;  */
   max-width: 430px;
+  width: 100%; /* 부모 요소의 너비 설정 */
   border: 1px solid #878787;
 `;
 

@@ -28,7 +28,6 @@ const messageInputText = css`
   overflow: auto;
   background: none;
   font-size: 18px;
-  color: #979797;
   letter-spacing: -0.4px;
   cursor: text;
 `;
