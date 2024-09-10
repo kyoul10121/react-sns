@@ -7,6 +7,10 @@ import chatData from '../public/chatData.json';
 import userData from '../public/userData';
 
 const messageInput = css`
+  position: sticky;
+  z-index: 2;
+  bottom: 0;
+  width: 100%;
   padding: 12px 8px 32px;
 `;
 const MessageWindow = () => {

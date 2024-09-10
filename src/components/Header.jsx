@@ -5,13 +5,14 @@ import { UserProfile } from './UserProfile';
 import { Settings } from './Settings';
 
 const headerWrapper = css`
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #fff;
   width: 100%;
   height: 80px;
-  box-sizing: border-box;
   padding: 12px 16px;
 `;
 
