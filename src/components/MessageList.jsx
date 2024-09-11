@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import PropTypes from 'prop-types';
 import { OtherMessageItem } from './OtherMessageItem.jsx';
 import { MyMessageItem } from './MyMessageItem.jsx';
 

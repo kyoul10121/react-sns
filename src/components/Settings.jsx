@@ -1,16 +1,16 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
 import { css } from '@emotion/react';
-
+import Bell from '/public/assets/notification-bell.png';
+import Video from '/public/assets/video-button.png';
 export const Settings = () => {
   // 방해금지모드
   return (
     <div css={settingButtonWrapper}>
       <button>
-        <img src="src/assets/notification-bell.png" css={settingButton} />
+        <img src={Bell} css={settingButton} />
       </button>
       <button>
-        <img src="src/assets/video-button.png" css={videoButton} />
+        <img src={Video} css={videoButton} />
       </button>
     </div>
   );

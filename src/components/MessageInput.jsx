@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { css } from '@emotion/react';
+import Search from '/public/assets/search.png';
+import Send from '/public/assets/send.png';
 
 const MessageInput = ({ onSendMessage }) => {
   const [newMessage, setNewMessage] = useState('');
@@ -44,7 +46,7 @@ const MessageInput = ({ onSendMessage }) => {
         css={messageInputForm}
       >
         <button css={searchButton}>
-          <img src="src/assets/search.png" css={imageSize} />
+          <img src={Search} css={imageSize} />
         </button>
         <textarea
           value={newMessage}
@@ -54,7 +56,7 @@ const MessageInput = ({ onSendMessage }) => {
           autoFocus
         ></textarea>
         <button type="submit" css={submitButton} onClick={handleSendMessage}>
-          <img src="src/assets/send.png" css={imageSize} />
+          <img src={Send} css={imageSize} />
         </button>
       </form>
     </div>

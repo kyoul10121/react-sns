@@ -1,12 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import { css } from '@emotion/react';
+import Arrow from '/public/assets/arrow-left.png';
+import Profile from '/public/assets/mark.jpeg';
 
 export const UserProfile = () => {
   return (
     <div css={userProfileItems}>
-      <img src="src/assets/arrow-left.png" css={arrowLeft} />
-      <img src="src/assets/mark.jpeg" css={userProfileImage} />
+      <img src={Arrow} css={arrowLeft} />
+      <img src={Profile} css={userProfileImage} />
       <section css={userWrapper}>
         {/* 이름과 아이디 */}
         <span css={userName}>이민형</span>
