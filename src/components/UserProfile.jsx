@@ -2,6 +2,21 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
+export const UserProfile = () => {
+  return (
+    <div css={userProfileItems}>
+      <img src="src/assets/arrow-left.png" css={arrowLeft} />
+      <img src="src/assets/mark.jpeg" css={userProfileImage} />
+      <section css={userWrapper}>
+        {/* 이름과 아이디 */}
+        <span css={userName}>이민형</span>
+        <span css={userId}>onyourM__ark</span>
+      </section>
+    </div>
+  );
+};
+
+// emotion
 const userProfileItems = css`
   display: flex;
 `;
@@ -28,17 +43,3 @@ const arrowLeft = css`
   height: 36px;
   cursor: pointer;
 `;
-
-export const UserProfile = () => {
-  return (
-    <div css={userProfileItems}>
-      <img src="src/assets/arrow-left.png" css={arrowLeft} />
-      <img src="src/assets/mark.jpeg" css={userProfileImage} />
-      <section css={userWrapper}>
-        {/* 이름과 아이디 */}
-        <span css={userName}>이민형</span>
-        <span css={userId}>onyourM__ark</span>
-      </section>
-    </div>
-  );
-};

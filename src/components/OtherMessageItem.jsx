@@ -2,6 +2,22 @@
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 
+export const OtherMessageItem = ({ message, user }) => {
+  return (
+    <div css={otherMessageItemWrapper}>
+      <img src={user.userImage} alt={user.userImage} css={profileImage} />
+      <div css={otherMessageInfo}>
+        <span css={userId}>{user.userName}</span>
+        <div css={otherMessageTextItem}>
+          <div css={otherMessageText}>{message.text}</div>
+          <span css={userTime}>{message.time}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// emotion
 const otherMessageItemWrapper = css`
   width: 100%;
   display: flex;
@@ -42,18 +58,3 @@ const userTime = css`
   font-size: 10px;
   color: #b6b6b6;
 `;
-
-export const OtherMessageItem = ({ message, user }) => {
-  return (
-    <div css={otherMessageItemWrapper}>
-      <img src={user.userImage} alt={user.userImage} css={profileImage} />
-      <div css={otherMessageInfo}>
-        <span css={userId}>{user.userName}</span>
-        <div css={otherMessageTextItem}>
-          <div css={otherMessageText}>{message.text}</div>
-          <span css={userTime}>{message.time}</span>
-        </div>
-      </div>
-    </div>
-  );
-};
