@@ -19,6 +19,8 @@ export const UserProfile = () => {
 // emotion
 const userProfileItems = css`
   display: flex;
+  align-items: center;
+  gap: 10px;
 `;
 const userProfileImage = css`
   width: 36px;
@@ -39,7 +41,7 @@ const userId = css`
 `;
 const arrowLeft = css`
   fill: none;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 `;

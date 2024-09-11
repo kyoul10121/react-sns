@@ -20,6 +20,7 @@ export default Header;
 const headerWrapper = css`
   position: sticky;
   top: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,4 +28,5 @@ const headerWrapper = css`
   width: 100%;
   height: 80px;
   padding: 12px 16px;
+  border-bottom: 1px solid #dbdbdb;
 `;

@@ -34,5 +34,5 @@ const messageListWrapper = css`
   flex: 1;
   flex-direction: column;
   gap: 20px;
-  overflow: scroll;
+  overflow-y: auto;
 `;

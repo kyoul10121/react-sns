@@ -5,7 +5,7 @@ import { css } from '@emotion/react';
 export const Settings = () => {
   // 방해금지모드
   return (
-    <div>
+    <div css={settingButtonWrapper}>
       <button>
         <img src="src/assets/notification-bell.png" css={settingButton} />
       </button>
@@ -17,6 +17,11 @@ export const Settings = () => {
 };
 
 // emotion
+const settingButtonWrapper = css`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+`;
 const settingButton = css`
   fill: none;
   width: 28px;
@@ -24,7 +29,7 @@ const settingButton = css`
   cursor: pointer;
 `;
 const videoButton = css`
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 `;

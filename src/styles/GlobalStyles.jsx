@@ -18,7 +18,7 @@ const GlobalStyles = () => {
 
         * {
           box-sizing: border-box;
-          scrollbar-width: none;
+          scrollbar-width: none; // 스크롤의 기본 스타일은 지우고 스크롤의 기능만 사용
           overscroll-behavior: none; // 스크롤이 오버되는 것을 막아준다.
         }
         html,

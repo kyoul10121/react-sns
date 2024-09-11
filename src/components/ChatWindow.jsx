@@ -19,5 +19,5 @@ export default ChatWindow;
 const Wrapper = css`
   max-width: 430px;
   width: 100%; /* 부모 요소의 너비 설정 */
-  border: 1px solid #878787;
+  border: 1px solid #dbdbdb;
 `;

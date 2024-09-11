@@ -33,11 +33,11 @@ const MessageWindow = () => {
     setMessages((prevMessages) => [...prevMessages, newMessage]); // 메세지 추가
   };
 
-  const contentRef = useRef(null);
+  const messageWindowRef = useRef(null);
 
   // 메시지가 업데이트될 때 자동으로 하단으로 스크롤
   useEffect(() => {
-    contentRef.current.scrollIntoView({ behavior: 'smooth' });
+    messageWindowRef.current.scrollIntoView({ behavior: 'smooth' });
   }, [messages]); // messages가 업데이트될 때마다 실행
 
   return (
@@ -48,7 +48,7 @@ const MessageWindow = () => {
         {/* 메세지 입력 */}
         <MessageInput onSendMessage={handleSendMessage} />
       </div>
-      <div ref={contentRef}></div>
+      <div ref={messageWindowRef}></div>
     </div>
   );
 };
