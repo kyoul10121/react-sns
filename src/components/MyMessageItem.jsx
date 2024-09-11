@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 
 export const MyMessageItem = ({ message, user }) => {
@@ -54,7 +53,7 @@ const MyMessageText = css`
   padding: 12px;
   background: #e9e9e9;
   font-size: 18px;
-  border-radius: 5px 20px 20px;
+  border-radius: 20px 5px 20px 20px;
 `;
 const userTime = css`
   font-size: 10px;
