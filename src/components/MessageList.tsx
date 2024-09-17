@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { OtherMessageItem } from './OtherMessageItem.jsx';
-import { MyMessageItem } from './MyMessageItem.jsx';
+import { OtherMessageItem } from './OtherMessageItem.js';
+import { MyMessageItem } from './MyMessageItem.js';
 
 const MessageList = ({ users, messages }) => {
   // 각각의 메세지를 포함한 메세지 리스트
@@ -28,7 +28,7 @@ export default MessageList;
 // emotion
 const messageListWrapper = css`
   width: 100%;
-  padding: 100px 20px 92px;
+  padding: 0 20px 0;
   display: flex;
   flex: 1;
   flex-direction: column;
