@@ -4,13 +4,17 @@ import { css } from '@emotion/react';
 import Search from '/public/assets/search.png';
 import Send from '/public/assets/send.png';
 
-const MessageInput = ({ onSendMessage }) => {
+interface MessageInputProps {
+  onSendMessage: (message: string) => void;
+}
+
+const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage }) => {
   const [newMessage, setNewMessage] = useState('');
-  const textareaRef = useRef(null);
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null); // ref의 타입을 HTMLTextAreaElement 또는 null로 명시
 
   // form 제출 시 새로고침 방지
   const handleFormClick = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault(); // Enter로 줄바꿈 방지, 메세지 전송
   };
 
   const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
