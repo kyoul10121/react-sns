@@ -1,7 +1,25 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+interface User {
+  id: number;
+  userName: string;
+  userImage: string;
+}
+interface Message {
+  id: number;
+  userId: number;
+  text: string;
+  time: string;
+}
 
-export const MyMessageItem = ({ message, user }) => {
+interface MyMessageItemProps {
+  user: User;
+  message: Message;
+}
+export const MyMessageItem: React.FC<MyMessageItemProps> = ({
+  message,
+  user,
+}) => {
   return (
     <div>
       <div css={MyMessageItemWrapper}>
