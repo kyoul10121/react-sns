@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { useState, useRef } from 'react';
+import { useState, useRef, FormEvent } from 'react';
 import { css } from '@emotion/react';
 import Search from '/public/assets/search.png';
 import Send from '/public/assets/send.png';
@@ -9,11 +9,11 @@ const MessageInput = ({ onSendMessage }) => {
   const textareaRef = useRef(null);
 
   // form 제출 시 새로고침 방지
-  const handleFormClick = (e) => {
+  const handleFormClick = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 
-  const handleTextareaChange = (e) => {
+  const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setNewMessage(e.target.value);
   };
 
@@ -28,7 +28,7 @@ const MessageInput = ({ onSendMessage }) => {
     textareaRef.current && textareaRef.current.focus();
   };
 
-  const onCheckEnter = (e) => {
+  const onCheckEnter = (e: React.KeyboardEvent<HTMLFormElement>) => {
     if (e.key === 'Enter' && e.nativeEvent.isComposing == false) {
       e.preventDefault(); // Enter로 줄바꿈 방지, 메세지 전송
       handleSendMessage();
