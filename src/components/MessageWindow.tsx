@@ -5,18 +5,32 @@ import MessageList from './MessageList';
 import MessageInput from './MessageInput';
 import chatData from '../db/chatData.json';
 import userData from '../db/userData.json';
+
+interface Message {
+  id: number;
+  userId: number;
+  text: string;
+  time: string;
+}
+
+interface User {
+  id: number;
+  userName: string;
+  userImage: string;
+}
 const MessageWindow = () => {
   // 메세지 입력창을 포함한 모든 대화창
 
-  const [messages, setMessages] = useState([]);
-  const [users] = useState(userData);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [users] = useState<User[]>(userData);
 
   // 컴포넌트가 처음 렌더링될 때 JSON 데이터 불러오기
   useEffect(() => {
     setMessages(chatData); // 초기 메세지 로드
   }, []);
 
-  const handleSendMessage = (newMessageText) => {
+  const handleSendMessage = (newMessageText: string) => {
+    // newMessageText의 타입을 string으로 명시
     const currentTime = new Date().toLocaleTimeString([], {
       hour: '2-digit',
       minute: '2-digit',
@@ -32,11 +46,13 @@ const MessageWindow = () => {
     setMessages((prevMessages) => [...prevMessages, newMessage]); // 메세지 추가
   };
 
-  const messageWindowRef = useRef(null);
+  const messageWindowRef = useRef<HTMLDivElement>(null); // messageWindowRef가 HTMLDivElement임을 명시
 
   // 메시지가 업데이트될 때 자동으로 하단으로 스크롤
   useEffect(() => {
-    messageWindowRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (messageWindowRef.current)
+      // ref가 null이 아닌지 확인 후 스크롤
+      messageWindowRef.current.scrollIntoView({ behavior: 'smooth' });
   }, [messages]); // messages가 업데이트될 때마다 실행
 
   return (
