@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     /* Modules */
-    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
     // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     /* Type Checking */
@@ -15,10 +14,12 @@
     "jsx": "react-jsx", // use typescript to transpile jsx to js
     "target": "es5", // specify ECMAScript target version
     "allowJs": true, // allow a partial TypeScript and JavaScript codebase
-    "moduleResolution": "node", // specify module resolution strategy
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true, //.ts 확장자를 사용하여 모듈을 불러오기
-    "noEmit": true
+    "noEmit": true,
+    "resolveJsonModule": true, // json 파일 경로 찾기, esModuleInterop을 추가해 '* as' 생략
+    "esModuleInterop": true,
+    "moduleResolution": "node"
   },
   "include": ["./src/"]
 }

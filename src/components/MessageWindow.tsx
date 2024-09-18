@@ -3,9 +3,8 @@ import { css } from '@emotion/react';
 import { useState, useEffect, useRef } from 'react';
 import MessageList from './MessageList';
 import MessageInput from './MessageInput';
-import chatData from '/public/chatData.json';
-import userData from '/public/userData.json';
-
+import chatData from '../db/chatData.json';
+import userData from '../db/userData.json';
 const MessageWindow = () => {
   // 메세지 입력창을 포함한 모든 대화창
 
