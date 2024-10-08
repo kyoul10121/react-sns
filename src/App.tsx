@@ -1,6 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import MessageInputPage from './pages/MessageInputPage';
+import { Outlet } from 'react-router-dom';
+
+export default function App() {
+  return (
+    <div css={appStyle}>
+      <Outlet />
+    </div>
+  );
+}
 
 const appStyle = css`
   width: 100vw;
@@ -9,12 +17,3 @@ const appStyle = css`
   align-items: center;
   justify-content: center;
 `;
-function App() {
-  return (
-    <div css={appStyle}>
-      <MessageInputPage />
-    </div>
-  );
-}
-
-export default App;
