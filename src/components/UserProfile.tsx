@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import { css } from '@emotion/react';
-import Arrow from '/public/assets/arrow-left.png';
+import Arrow from '/public/assets/icons/arrow-left.png';
 import Profile from '/public/assets/images/mark.jpeg';
 
 export const UserProfile = () => {
