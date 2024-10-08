@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import { css } from '@emotion/react';
-import Arrow from '/public/assets/icons/arrow-left.png';
-import Profile from '/public/assets/images/mark.jpeg';
+import Arrow from '../../assets/icons/arrow-left.png';
+import Profile from '../../assets/images/mark.jpeg';
 
 export const UserProfile = () => {
   return (

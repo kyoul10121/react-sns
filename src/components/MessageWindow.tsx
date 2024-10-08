@@ -5,7 +5,7 @@ import MessageList from './MessageList';
 import MessageInput from './MessageInput';
 import chatData from '../db/chatData.json';
 import userData from '../db/userData.json';
-
+console.log(userData);
 interface Message {
   id: number;
   userId: number;

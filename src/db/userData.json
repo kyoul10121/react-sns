@@ -2,11 +2,11 @@
   {
     "id": 0,
     "userName": "onyourM__ark",
-    "userImage": "assets/images/mark.jpeg"
+    "userImage": "src/assets/images/mark.jpeg"
   },
   {
     "id": 1,
     "userName": "yunil",
-    "userImage": "assets/images/myprofile.jpeg"
+    "userImage": "src/assets/images/myprofile.jpeg"
   }
 ]

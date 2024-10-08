@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { UserProfile } from './UserProfile';
-import { Settings } from './Settings';
+import { Settings } from '../UI/Settings';
 
 const Header = () => {
   // 프로필, 알림 기능 있는 헤더바

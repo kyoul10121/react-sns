@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { useState, useRef, FormEvent } from 'react';
 import { css } from '@emotion/react';
-import Search from '/public/assets/icons/search.png';
-import Send from '/public/assets/icons/send.png';
+import Search from '../assets/icons/search.png';
+import Send from '../assets/icons/send.png';
 
 interface MessageInputProps {
   onSendMessage: (message: string) => void;

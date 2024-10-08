@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import Header from './Header';
+import Header from './Layout/Header';
 import MessageWindow from './MessageWindow';
 
 const ChatWindow = () => {

@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import Bell from '/public/assets/icons/notification-bell.png';
-import Video from '/public/assets/icons/video-button.png';
+import Bell from '../../assets/icons/notification-bell.png';
+import Video from '../../assets/icons/video-button.png';
 export const Settings = () => {
   // 방해금지모드
   return (
