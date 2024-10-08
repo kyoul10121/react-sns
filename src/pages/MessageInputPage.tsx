@@ -1,18 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import Header from './Layout/Header';
-import MessageWindow from './MessageWindow';
+import Header from '../components/Layout/Header';
+import MessageWindow from '../components/MessageWindow';
 
-const ChatWindow = () => {
+export default function MessageInputPage() {
   return (
     <div css={Wrapper}>
       <Header />
       <MessageWindow />
     </div>
   );
-};
-
-export default ChatWindow;
+}
 
 // emotion
 const Wrapper = css`

@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import ChatWindow from './components/ChatWindow';
+import MessageInputPage from './pages/MessageInputPage';
 
 const appStyle = css`
   width: 100vw;
@@ -12,7 +12,7 @@ const appStyle = css`
 function App() {
   return (
     <div css={appStyle}>
-      <ChatWindow />
+      <MessageInputPage />
     </div>
   );
 }
