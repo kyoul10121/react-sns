@@ -2,7 +2,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import Arrow from '/public/assets/arrow-left.png';
-import Profile from '/public/assets/mark.jpeg';
+import Profile from '/public/assets/images/mark.jpeg';
 
 export const UserProfile = () => {
   return (
