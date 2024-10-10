@@ -5,19 +5,8 @@ import MessageList from './MessageList';
 import MessageInput from './MessageInput';
 import chatData from '../db/chatData.json';
 import userData from '../db/userData.json';
-console.log(userData);
-interface Message {
-  id: number;
-  userId: number;
-  text: string;
-  time: string;
-}
+import { Message, User } from '../types';
 
-interface User {
-  id: number;
-  userName: string;
-  userImage: string;
-}
 const MessageWindow = () => {
   // 메세지 입력창을 포함한 모든 대화창
 
@@ -26,7 +15,8 @@ const MessageWindow = () => {
 
   // 컴포넌트가 처음 렌더링될 때 JSON 데이터 불러오기
   useEffect(() => {
-    setMessages(chatData); // 초기 메세지 로드
+    const chatMessages = chatData[0].messages as Message[]; // chatData의 messages만 불러오기
+    setMessages(chatMessages);
   }, []);
 
   const handleSendMessage = (newMessageText: string) => {
@@ -39,7 +29,7 @@ const MessageWindow = () => {
 
     const newMessage = {
       id: messages.length + 1,
-      userId: 1, // 현재 로그인된 사용자를 가정
+      userId: 'onyourM__ark', // 현재 로그인된 사용자를 가정
       text: newMessageText,
       time: currentTime,
     };
@@ -54,7 +44,7 @@ const MessageWindow = () => {
       // ref가 null이 아닌지 확인 후 스크롤
       messageWindowRef.current.scrollIntoView({ behavior: 'smooth' });
   }, [messages]); // messages가 업데이트될 때마다 실행
-
+  console.log(messages);
   return (
     <div>
       {/* 메세지 목록 렌더링 */}

@@ -2,17 +2,8 @@
 import { css } from '@emotion/react';
 import { OtherMessageItem } from './OtherMessageItem.js';
 import { MyMessageItem } from './MyMessageItem.js';
-interface Message {
-  id: number;
-  userId: number;
-  text: string;
-  time: string;
-}
-interface User {
-  id: number;
-  userName: string;
-  userImage: string;
-}
+import { Message, User } from '../types.ts';
+
 interface MessageListProps {
   users: User[];
   messages: Message[];
@@ -23,8 +14,8 @@ const MessageList: React.FC<MessageListProps> = ({ users, messages }) => {
   return (
     <div css={messageListWrapper}>
       {messages.map((message) => {
-        const user = users.find((user) => user.id === message.userId)!; // '!'를 추가해줌으로서 user는 반드시 존재한다.
-        if (message.userId === 1) {
+        const user = users.find((user) => user.userId === message.userId)!; // '!'를 추가해줌으로서 user는 반드시 존재한다.
+        if (message.userId === '9_atns') {
           return (
             <MyMessageItem key={message.id} message={message} user={user} />
           );
