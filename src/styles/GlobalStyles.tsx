@@ -38,6 +38,7 @@ const GlobalStyles = () => {
         textarea {
           outline: none;
           border: none;
+          background: none;
         }
       `}
     />

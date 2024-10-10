@@ -29,7 +29,7 @@ const MessageWindow = () => {
 
     const newMessage = {
       id: messages.length + 1,
-      userId: 'onyourM__ark', // 현재 로그인된 사용자를 가정
+      userId: '_jeongjaehyun', // 현재 로그인된 사용자를 가정
       text: newMessageText,
       time: currentTime,
     };
@@ -44,7 +44,6 @@ const MessageWindow = () => {
       // ref가 null이 아닌지 확인 후 스크롤
       messageWindowRef.current.scrollIntoView({ behavior: 'smooth' });
   }, [messages]); // messages가 업데이트될 때마다 실행
-  console.log(messages);
   return (
     <div>
       {/* 메세지 목록 렌더링 */}
