@@ -36,8 +36,15 @@ export default function ChatListPage() {
         <ul>
           {users.map((user) => (
             <li key={user.userId} onClick={() => handleChatClick(user.userId)}>
-              <img src={user.userImage} alt={user.userName} />
-              <span>{user.userName}</span>
+              <img
+                src={user.userImage}
+                alt={user.userName}
+                css={userProfileImage}
+              />
+              <div css={userWrapper}>
+                <span css={userNameStyle}>{user.userName}</span>
+                <span css={userId}>마지막 메세지</span>
+              </div>
             </li>
           ))}
         </ul>
@@ -62,6 +69,28 @@ export default function ChatListPage() {
     </div>
   );
 }
+const userId = css`
+  color: #979797;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+`;
+const userNameStyle = css`
+  font-size: 18px;
+`;
+const userWrapper = css`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 4px 0;
+  gap: 4px;
+`;
+const userProfileImage = css`
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #dbdbdb;
+`;
 const navIcons = css`
   width: 100%;
   height: 100%;

@@ -13,7 +13,11 @@ export const OtherMessageItem: React.FC<OtherMessageItemProps> = ({
 }) => {
   return (
     <div css={otherMessageItemWrapper}>
-      <img src={user.userImage} alt={user.userImage} css={profileImage} />
+      <img
+        src={'../../' + user.userImage}
+        alt={user.userImage}
+        css={profileImage}
+      />
       <div css={otherMessageInfo}>
         <span css={userId}>{user.userId}</span>
         <div css={otherMessageTextItem}>

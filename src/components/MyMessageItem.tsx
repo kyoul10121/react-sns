@@ -19,7 +19,11 @@ export const MyMessageItem: React.FC<MyMessageItemProps> = ({
             <div css={MyMessageText}>{message.text}</div>
           </div>
         </div>
-        <img src={user.userImage} alt={user.userName} css={profileImage} />
+        <img
+          src={'../../' + user.userImage}
+          alt={user.userName}
+          css={profileImage}
+        />
       </div>
     </div>
   );
