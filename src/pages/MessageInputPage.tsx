@@ -35,5 +35,7 @@ export default function MessageInputPage() {
 const wrapper = css`
   max-width: 430px;
   width: 100%; /* 부모 요소의 너비 설정 */
-  border: 1px solid #dbdbdb;
+  height: 100vh;
+  /* border: 1px solid #dbdbdb; */
+  border: 1px solid red;
 `;

@@ -29,6 +29,7 @@ const GlobalStyles = () => {
           background: white;
           min-height: 100%;
           font-family: 'Pretendard-Regular';
+          max-width: 430px;
         }
         button {
           border: none;

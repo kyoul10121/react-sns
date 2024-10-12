@@ -51,22 +51,14 @@ const MessageWindow = ({ userId }: { userId: string }) => {
     }
   };
 
-  const messageWindowRef = useRef<HTMLDivElement>(null); // messageWindowRef가 HTMLDivElement임을 명시
-
-  // 메시지가 업데이트될 때 자동으로 하단으로 스크롤
-  useEffect(() => {
-    messageWindowRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [currentChat?.messages]); // messages가 업데이트될 때마다 실행
-
   return (
-    <div>
+    <div css={i}>
       {/* 메세지 목록 렌더링 */}
       <MessageList messages={currentChat?.messages || []} users={users} />
       <div css={messageInput}>
         {/* 메세지 입력 */}
         <MessageInput onSendMessage={handleSendMessage} />
       </div>
-      <div ref={messageWindowRef}></div>
     </div>
   );
 };
@@ -74,10 +66,16 @@ const MessageWindow = ({ userId }: { userId: string }) => {
 export default MessageWindow;
 
 // emotion
+const i = css`
+  padding: 100px 0 0;
+  overflow-y: auto;
+  max-height: calc(100vh - 100px);
+`;
 const messageInput = css`
-  position: sticky;
+  position: fixed;
   z-index: 2;
   bottom: 0;
+  max-width: 428px;
   width: 100%;
   padding: 12px 8px 32px;
 `;

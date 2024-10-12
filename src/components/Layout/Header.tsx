@@ -17,13 +17,14 @@ export default Header;
 
 // emotion
 const headerWrapper = css`
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #fff;
+  max-width: 428px;
   width: 100%;
   height: 80px;
   padding: 12px 16px;
