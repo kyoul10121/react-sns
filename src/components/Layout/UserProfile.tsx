@@ -1,29 +1,39 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
 import { css } from '@emotion/react';
 import Arrow from '../../assets/icons/arrow.svg';
-import Profile from '../../assets/images/mark.jpeg';
 import { useNavigate } from 'react-router-dom';
+import { useRecoilValue } from 'recoil';
+import { userState } from '../../recoil/atoms';
 
-export const UserProfile = () => {
+export const UserProfile = ({
+  userImage,
+  userName,
+  userId,
+}: {
+  userImage: string;
+  userName: string;
+  userId: string;
+}) => {
   const navigate = useNavigate();
   const handleGoToChatList = () => {
     navigate('/chatList');
   };
+
+  const users = useRecoilValue(userState);
+  console.log('what is userImage', userImage);
+
   return (
     <div css={userProfileItems}>
       <img src={Arrow} css={arrowLeft} onClick={handleGoToChatList} />
-      <img src={Profile} css={userProfileImage} />
+      <img src={userImage} css={userProfileImage} />
       <section css={userWrapper}>
         {/* 이름과 아이디 */}
-        <span css={userName}>이민형</span>
-        <span css={userId}>onyourM__ark</span>
+        <span css={userNameStyle}>{userName}</span>
+        <span css={userIdStyle}>{userId}</span>
       </section>
     </div>
   );
-};
-
-// emotion
+}; // emotion
 const userProfileItems = css`
   display: flex;
   align-items: center;
@@ -39,10 +49,10 @@ const userWrapper = css`
   display: flex;
   flex-direction: column;
 `;
-const userName = css`
+const userNameStyle = css`
   font-size: 18px;
 `;
-const userId = css`
+const userIdStyle = css`
   font-size: 12px;
   color: #979797;
 `;

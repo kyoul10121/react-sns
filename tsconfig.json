@@ -20,7 +20,8 @@
     "noEmit": true,
     "resolveJsonModule": true, // json 파일 경로 찾기, esModuleInterop을 추가해 '* as' 생략
     "esModuleInterop": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "lib": ["dom", "es2015"]
   },
   "include": ["./src/"]
 }

@@ -6,11 +6,17 @@ import Home from '../assets/icons/home.svg';
 import Plus from '../assets/icons/plus.svg';
 import Video from '../assets/icons/video.svg';
 import MyProfile from '../assets/images/myprofile.jpeg';
-import { ChatProfile } from '../components/Layout/ChatProfile';
+import { useRecoilValue } from 'recoil';
+import { userState, chatState } from '../recoil/atoms';
 
 // 채팅방 목록 페이지
 export default function ChatListPage() {
+  const users = useRecoilValue(userState);
   const navigate = useNavigate();
+
+  const handleChatClick = (userId) => {
+    navigate(`/message/${userId}`);
+  };
 
   return (
     <div css={chatWrapper}>
@@ -27,9 +33,14 @@ export default function ChatListPage() {
         </div>
       </div>
       <section css={chatListWrapper}>
-        <a css={chat} href="/message">
-          <ChatProfile />
-        </a>
+        <ul>
+          {users.map((user) => (
+            <li key={user.userId} onClick={() => handleChatClick(user.userId)}>
+              <img src={user.userImage} alt={user.userName} />
+              <span>{user.userName}</span>
+            </li>
+          ))}
+        </ul>
       </section>
       <nav css={navWrapper}>
         <div css={navIcons}>

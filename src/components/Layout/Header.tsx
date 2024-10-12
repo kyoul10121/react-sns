@@ -3,11 +3,11 @@ import { css } from '@emotion/react';
 import { UserProfile } from './UserProfile';
 import { Settings } from '../UI/Settings';
 
-const Header = () => {
+const Header = ({ userImage, userName, userId }) => {
   // 프로필, 알림 기능 있는 헤더바
   return (
     <div css={headerWrapper}>
-      <UserProfile />
+      <UserProfile userImage={userImage} userName={userName} userId={userId} />
       <Settings />
     </div>
   );

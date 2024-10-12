@@ -9,7 +9,7 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '/message',
+        path: 'message/:userId', // userId 파라미터 추가
         element: <MessageInputPage />,
       },
       {
