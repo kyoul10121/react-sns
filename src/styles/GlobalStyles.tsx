@@ -40,6 +40,12 @@ const GlobalStyles = () => {
           border: none;
           background: none;
         }
+        ul,
+        li {
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+        }
       `}
     />
   );

@@ -32,21 +32,27 @@ export default function ChatListPage() {
           <input type="text" placeholder="이름 검색" css={inputBox} />
         </div>
       </div>
-      <section css={chatListWrapper}>
+      <section>
         <ul>
-          {users.map((user) => (
-            <li key={user.userId} onClick={() => handleChatClick(user.userId)}>
-              <img
-                src={user.userImage}
-                alt={user.userName}
-                css={userProfileImage}
-              />
-              <div css={userWrapper}>
-                <span css={userNameStyle}>{user.userName}</span>
-                <span css={userId}>마지막 메세지</span>
-              </div>
-            </li>
-          ))}
+          {users
+            .filter((user) => user.userName !== '김윤일') // 사용자 '김윤일'은 채팅 목록에서 제외
+            .map((user) => (
+              <li
+                key={user.userId}
+                css={userProfileItems}
+                onClick={() => handleChatClick(user.userId)}
+              >
+                <img
+                  src={user.userImage}
+                  alt={user.userName}
+                  css={userProfileImage}
+                />
+                <div css={userWrapper}>
+                  <span css={userNameStyle}>{user.userName}</span>
+                  <span css={userId}>마지막 메세지</span>
+                </div>
+              </li>
+            ))}
         </ul>
       </section>
       <nav css={navWrapper}>
@@ -69,6 +75,13 @@ export default function ChatListPage() {
     </div>
   );
 }
+const userProfileItems = css`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  gap: 20px;
+`;
 const userId = css`
   color: #979797;
   font-size: 14px;
@@ -86,6 +99,8 @@ const userWrapper = css`
   gap: 4px;
 `;
 const userProfileImage = css`
+  display: flex;
+  flex-direction: row;
   width: 56px;
   height: 56px;
   border-radius: 50%;
