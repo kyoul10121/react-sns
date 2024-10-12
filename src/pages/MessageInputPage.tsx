@@ -11,8 +11,6 @@ export default function MessageInputPage() {
   const users = useRecoilValue(userState);
   const currentUser = users.find((user) => user.userId === userId);
 
-  console.log('MessageInputPage - currentUser:', currentUser);
-
   return (
     <div css={wrapper}>
       {currentUser ? (

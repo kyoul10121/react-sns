@@ -20,7 +20,6 @@ export const UserProfile = ({
   };
 
   const users = useRecoilValue(userState);
-  console.log('what is userImage', userImage);
 
   return (
     <div css={userProfileItems}>
