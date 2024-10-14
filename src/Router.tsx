@@ -9,7 +9,7 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: 'chatList', // 상대 경로로 변경
+        path: '', // 기본 경로로 ChatListPage를 설정
         element: <ChatListPage />,
       },
       {
