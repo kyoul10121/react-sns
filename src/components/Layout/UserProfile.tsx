@@ -24,7 +24,7 @@ export const UserProfile = ({
   return (
     <div css={userProfileItems}>
       <img src={Arrow} css={arrowLeft} onClick={handleGoToChatList} />
-      <img src={'../../' + userImage} css={userProfileImage} />
+      <img src={userImage} css={userProfileImage} />
       <section css={userWrapper}>
         {/* 이름과 아이디 */}
         <span css={userNameStyle}>{userName}</span>

@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import { css } from '@emotion/react';
-import Profile from '../../assets/images/mark.jpeg';
+import Profile from '/images/mark.jpeg';
 
 export const ChatProfile = () => {
   return (

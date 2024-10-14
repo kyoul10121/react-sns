@@ -2,31 +2,31 @@
   {
     "userId": "onyourM__ark",
     "userName": "이민형",
-    "userImage": "src/assets/images/mark.jpeg",
+    "userImage": "/images/mark.jpeg",
     "chatId": 1
   },
   {
     "userId": "9_atns",
     "userName": "김윤일",
-    "userImage": "src/assets/images/myprofile.jpeg",
+    "userImage": "/images/myprofile.jpeg",
     "chatId": [1, 2, 3]
   },
   {
     "userId": "_jeongjaehyun",
     "userName": "Jaehyun",
-    "userImage": "src/assets/images/jaehyun.png",
+    "userImage": "/images/jaehyun.png",
     "chatId": 2
   },
   {
     "userId": "dlwlrma",
     "userName": "이지금",
-    "userImage": "src/assets/images/dlwlrma.png",
+    "userImage": "/images/dlwlrma.png",
     "chatId": 3
   },
   {
     "userId": "eunwo.o_c",
     "userName": "차은우",
-    "userImage": "src/assets/images/eunwo.png",
+    "userImage": "/images/eunwo.png",
     "chatId": 4
   }
 ]

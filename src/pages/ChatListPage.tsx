@@ -5,7 +5,7 @@ import Search from '../assets/icons/search-black.svg';
 import Home from '../assets/icons/home.svg';
 import Plus from '../assets/icons/plus.svg';
 import Video from '../assets/icons/video.svg';
-import MyProfile from '../assets/images/myprofile.jpeg';
+import MyProfile from '/images/myprofile.jpeg';
 import { useRecoilValue } from 'recoil';
 import { userState, chatState } from '../recoil/atoms';
 
