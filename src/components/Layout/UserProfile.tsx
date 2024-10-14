@@ -16,7 +16,7 @@ export const UserProfile = ({
 }) => {
   const navigate = useNavigate();
   const handleGoToChatList = () => {
-    navigate('/chatList');
+    navigate('/');
   };
 
   const users = useRecoilValue(userState);
