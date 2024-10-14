@@ -5,7 +5,7 @@ import MessageInputPage from './pages/MessageInputPage';
 import ChatListPage from './pages/ChatListPage';
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/*',
     element: <App />,
     children: [
       {
