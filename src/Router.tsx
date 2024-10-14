@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
         element: <MessageInputPage />,
       },
       {
-        path: '/chatList',
+        path: 'chatList', // 상대 경로로 변경
         element: <ChatListPage />,
       },
     ],
