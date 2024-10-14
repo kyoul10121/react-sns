@@ -9,12 +9,12 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: 'message/:userId', // userId 파라미터 추가
-        element: <MessageInputPage />,
-      },
-      {
         path: 'chatList', // 상대 경로로 변경
         element: <ChatListPage />,
+      },
+      {
+        path: 'message/:userId', // userId 파라미터 추가
+        element: <MessageInputPage />,
       },
     ],
     errorElement: <NotFound />,
